@@ -1,5 +1,6 @@
 package com.clintonbrito;
 
+import com.clintonbrito.facade.Facade;
 import com.clintonbrito.singleton.SingletonEager;
 import com.clintonbrito.singleton.SingletonLazy;
 import com.clintonbrito.singleton.SingletonLazyHolder;
@@ -22,6 +23,11 @@ public class Main {
         System.out.println(lazyHolder);
         lazyHolder = SingletonLazyHolder.getInstance();
         System.out.println(lazyHolder);
+
+        // Facade
+
+        Facade facade = new Facade();
+        facade.migrateCustomer("Bill", "08061040");
 
     }
 }
